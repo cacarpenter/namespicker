@@ -1,9 +1,5 @@
-Larry
-Sally
-Robert
-Jessie
-Jane
-Fred
+Larry,Sally
+Robert,Jessica
+Jane,Fred
 Kevin
-Ralph
-Alice
+Ralph,Alice

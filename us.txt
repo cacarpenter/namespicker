@@ -1,7 +1,4 @@
 Craig
-Derek
-Donna
-Jason
-Jerry
-Roxie
-Vicky
+Derek,Roxie
+Donna,Jerry
+Jason,Vicky
