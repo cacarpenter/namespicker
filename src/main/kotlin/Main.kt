@@ -52,8 +52,8 @@ fun randomReceiver(names: Map<String, String?>): Map<String,String> {
             receiver = leftToRec.get(rIdx)
             p++
         }
-        if(receiver == null) {
-            throw IllegalStateException("Giving Up")
+        if(receiver == null || p == 20) {
+            throw IllegalStateException("Giving Up $p")
         }
         leftToRec.removeAt(rIdx)
         leftToGive.removeAt(gIdx)
