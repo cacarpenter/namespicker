@@ -4,7 +4,18 @@ import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
-//val NAMESFILE = "lots-of-names.txt"
+const val SANTA = """
+  .-""-.
+ /,..___\
+() {_____}
+  (/-@-@-\)
+  {`-=^=-'}
+  {  `-'  } Ho Ho Ho!
+   {     }
+    `---'
+"""
+
+//val NAMESFILE = "lots-of-names-with-pairs.txt"
 val NAMESFILE = "names.txt"
 //val NAMESFILE = "us.txt"
 
@@ -29,10 +40,15 @@ fun main(args: Array<String>) {
             pairMap.put(line.trim(), null)
         }
     }
-    val result = randomReceiver(pairMap)
-    println("-----------------")
-    for((giver, receiver) in result) {
-        println("$giver gives to $receiver")
+    try {
+        val result = randomReceiver(pairMap)
+        println("-----------------")
+        for((giver, receiver) in result) {
+            println("$giver gives to $receiver")
+        }
+    } catch(e: java.lang.IllegalStateException) {
+        println("try again")
+        println(SANTA)
     }
 }
 
